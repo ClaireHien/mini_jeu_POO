@@ -17,8 +17,8 @@ class Game
 
     #pour supprimer un joueur : a faire. 
     def kill_player
-        ennemies_list.delete(0)
-        puts ennemies_list.size
+        @enemies_list.delete(1)
+        puts @enemies_list
     end
 
     #pour ajouter un joueur
@@ -139,3 +139,5 @@ class Game
         end
     end
 end
+
+binding.pry
