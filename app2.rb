@@ -63,14 +63,14 @@ def battle_phase
         puts " "
         puts "Attaque un joueur : "
 
-        print "c - "
+        print "0 - "
             #pour afficher si le joueur est déjà mort ou pas
             if player1.life_points > 0
                 player1.show_state
             else 
                 puts "#{player1.name} est mort !"
             end
-        print "d - "
+        print "1 - "
             #pour afficher si le joueur est déjà mort ou pas
             if player2.life_points > 0
                 player2.show_state
@@ -88,7 +88,7 @@ def battle_phase
             player0.search_weapon
         elsif ask == "b"
             player0.search_health_pack
-        elsif ask == "c"
+        elsif ask == "0"
             player0.attacks(player1)
             #pour afficher si le joueur est déjà mort ou pas
             if player1.life_points > 0
@@ -96,7 +96,7 @@ def battle_phase
             else 
                 puts "#{player1.name} est mort !"
             end
-        elsif ask == "d"
+        elsif ask == "1"
             player0.attacks(player2)
             #pour afficher si le joueur est déjà mort ou pas
             if player2.life_points > 0
