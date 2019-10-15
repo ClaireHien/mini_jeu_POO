@@ -1,4 +1,4 @@
-<h1>Projet validant : S3 - J2</h1> Par Claire Tardy
+<h1>Projet validant : S3 - J2</h1> Par Claire Tardy<br /><br />
 
 <p><strong>Lancez app.rb</strong> depuis votre terminal et assistez à au combat entre Josiane et José. 
 Le combat se déroule tout seul, vous n'avez qu'à être spectateur et ouvrez les paris !</p>
