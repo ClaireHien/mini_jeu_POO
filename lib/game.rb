@@ -128,8 +128,14 @@ class Game
         #annonce des résultats
         if human_player.life_points > 0 
             puts " BRAVO ! Tu as survécu ! "
+            puts "Tu es le dernier survivant !"
+            puts " ... "
+            puts " ... "
+            puts " ... "
+            puts "Maintenant essaie donc de repeupler la terre tout seul hein petit malin !"
         else
-            puts "Bon... Tu es mort. Essaie encore !"
+            puts "Tu te fais subermger par le nombre... "
+            puts "Et tu finis par trépasser sous les attaques des bots. "
         end
     end
 end
