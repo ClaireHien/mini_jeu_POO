@@ -34,7 +34,7 @@ class Game
 
     #le menu de toutes les actions pouvant être effectuées
     def menu
-        puts " Voici les actions que tu peux effectuer :"
+        puts "Voici les actions que tu peux effectuer :"
         puts " "
         puts "a - Chercher une meilleur arme"
         puts "b - Chercher à se soigner"
@@ -63,8 +63,12 @@ class Game
         elsif ask == "0" || ask == "1" || ask == "2" || ask == "3" || ask == "4"
             ask = ask.to_i
             human_player.attacks(ennemies_list[ask])
+            if ennemies_list[ask].life_points < 1
+                puts "#{ennemies_list[ask].name} est mort !"
+            end
         else
             puts "Ce n'est pas un choix possible"
+            puts "Tant pis pour toi, tu perds un tour. Fais attention la prochaine fois ! "
         end
     end
 

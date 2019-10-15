@@ -23,8 +23,6 @@ def name_player
     puts "C'est parfait ! le jeu va commencer..."
     puts "Bonne chance #{pseudo} ! "
     puts " "
-    puts "Appuie sur entrée pour lancer le jeu"
-    gets.chomp
     return pseudo
 end
 
@@ -38,7 +36,28 @@ def my_game
 
     puts " "
 
+    puts "Appuie sur entrée pour lancer le jeu"
+    gets.chomp
+
     n = 1
+
+    while my_game.human_player.life_points > 0 && (my_game.ennemies_list[0].life_points > 0 || my_game.ennemies_list[1].life_points > 0 || my_game.ennemies_list[2].life_points > 0 || my_game.ennemies_list[3].life_points > 0)
+    puts " "
+    puts "---------- TOUR #{n}"
+    n = n + 1 #pour le compteur de tours
+    my_game.menu
+    puts " "
+    my_game.menu_choice
+    puts " "
+    my_game.ennemies_attack
+    puts " "
+    puts " "
+    my_game.human_player.show_state
+    puts "Appuie sur entrer pour continuer"
+    gets.chomp
+    end
+
+    my_game.end_game
 
   
 end
